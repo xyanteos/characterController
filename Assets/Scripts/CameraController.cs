@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour
         float moveX = Input.GetAxis("Mouse X") * mouseSpeed * Time.deltaTime;
         float moveY = Input.GetAxis("Mouse Y") * mouseSpeed * Time.deltaTime;
         rotation -= moveY;
-        //rotation = Mathf.Clamp(rotation,-90f, 80f);
+        rotation = Mathf.Clamp(rotation,-90f, 80f);
         
         playerBody.Rotate(Vector3.up  * moveX);
 
