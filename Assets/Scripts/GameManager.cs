@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
     public int timeToEnd;
+	public Text txt;
     bool gamePaused = false;
     bool endGame = false;
     bool win = false;
 
     void Start()
     {
+
        if(gameManager == null)
        {
             gameManager = this;
@@ -28,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+		txt.text = "Czas do konca : "+timeToEnd.ToString();
         if(Input.GetKeyDown(KeyCode.P))
         {
             if(gamePaused)

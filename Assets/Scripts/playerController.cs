@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 12f; //szybkość naszej postaci
+    public float speed = 12f, jumpForce = 5f; //szybkość naszej postaci
     public float gravity = -10; //przyspieszenie ziemskie 
     Vector3 velocity; //wyliczona prędkość w każdym kierunku
     CharacterController characterController; //komponent Character Controller
@@ -45,7 +45,10 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-        
+		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+		{
+			velocity.y = jumpForce;
+		}
 
         if (isGrounded && velocity.y < 0)
         {
@@ -71,4 +74,5 @@ public class PlayerController : MonoBehaviour
             hit.gameObject.GetComponent<PickUp>().Picked();
         }
     }
+
 }
