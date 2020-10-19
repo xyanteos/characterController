@@ -2570,7 +2570,7 @@ GameObject:
   - component: {fileID: 1928406029}
   - component: {fileID: 1928406028}
   m_Layer: 5
-  m_Name: Text
+  m_Name: txt Czas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2626,7 +2626,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Czas do konca :'
 --- !u!222 &1928406029
 CanvasRenderer:
   m_ObjectHideFlags: 0
