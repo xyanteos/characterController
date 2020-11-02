@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8024566817456660423}
   - component: {fileID: 996305627675387182}
   - component: {fileID: -8760650615085199469}
+  - component: {fileID: -8063084400399545298}
   m_Layer: 0
   m_Name: Kula
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5946941005532022929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.139, y: 1.043135, z: 1.9065129}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,6 +57,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -101,11 +103,24 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5946941005532022929}
   serializedVersion: 2
-  m_Mass: 0.01
+  m_Mass: 0.0068
   m_Drag: 0
-  m_AngularDrag: 0.01
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8063084400399545298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946941005532022929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c78b4858c561448bbb9944f7d1d7c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pref: {fileID: 4848838873179785792, guid: fb7f9307c66a1044ca87ead31e82cdbd, type: 3}

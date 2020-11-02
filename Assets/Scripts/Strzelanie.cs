@@ -5,7 +5,8 @@ using UnityEngine;
 public class Strzelanie : MonoBehaviour
 {
     public GameObject pref;
-    public float bulletSpeed = 400f;
+    public float bulletSpeed = 2f;
+    public bool uwzglednijCzas = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,13 @@ public class Strzelanie : MonoBehaviour
         {
             GameObject kula = Instantiate(pref, transform.position, Quaternion.identity);
             Rigidbody rb = kula.GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * bulletSpeed * Time.deltaTime);
+            if (!uwzglednijCzas) {
+                rb.AddForce(transform.forward * bulletSpeed);
+            }
+            else
+            {
+                rb.AddForce(transform.forward * bulletSpeed * Time.deltaTime);
+            }
 
         }
     }
